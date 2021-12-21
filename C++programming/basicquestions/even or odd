@@ -1,1 +1,20 @@
+    #include <iostream>
+    using namespace std;
+    int main()
+    {
+        cout<<"Even odd program"<<endl;
+        int x;
+        cout<<"Enter the number you want to check"<<endl;
+        cin>>x;
+        if (x%2==0)
+        {
+            cout<<x<<" is an even number"<<endl;
+        }
+        else 
+        {
+            cout<<x<<" is an odd number"<<endl;
+        }
+        
 
+    return 0;
+    }
