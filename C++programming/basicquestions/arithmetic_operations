@@ -1,1 +1,65 @@
 
+    #include <iostream>
+    using namespace std;
+    int main()
+    {
+        
+        cout<<"This program is for arithmetic operations "<<endl;
+        cout<<"Choose the appropriate option to perform the operation"<<endl;
+        cout<<"1.Addition"<<endl<<"2.Subtraction"<<endl<<"3.Multiplication"<<endl<<"4.Modulo"<<endl<<"5.Division"<<endl;
+
+        int option;
+        cin>>option;
+        int x,y;
+        
+
+        switch (option)
+        {
+        case 1:
+             cout<<"Enter the two numbers you want to add"<<endl;
+             cin>>x>>y;
+             cout<<"Sum of "<<x<<" and "<<y<<" is "<<(x+y)<<endl;
+             break;
+
+        case 2:
+             cout<<"Enter the two numbers you want to subtract"<<endl;
+             cin>>x>>y;
+             cout<<"Subtraction of "<<x<<" and "<<y<<" is "<<(x-y)<<endl;
+             break;
+
+        case 3:
+             cout<<"Enter the two numbers you want to multiply"<<endl;
+             cin>>x>>y;
+             cout<<"Multiplication of "<<x<<" and "<<y<<" is "<<(x*y)<<endl;
+             break;  
+
+        case 4:
+             cout<<"Enter the numbers for modulo operation"<<endl;
+             cin>>x>>y;
+             cout<<"Modulo of "<<x<<" and "<<y<<" is "<<(x%y)<<endl;
+             break;
+
+        case 5:
+             cout<<"Enter the numbers for division"<<endl;
+             cin>>x>>y;
+             cout<<"Division of "<<x<<" and "<<y<<" is "<<(x/y)<<endl;
+             break;
+
+
+        
+        
+        default:
+             cout<<"Enter proper option"<<endl; 
+            break;
+             
+
+
+                  
+        
+        
+        }
+
+
+
+    return 0;
+    }
