@@ -1,0 +1,19 @@
+    #include <iostream>
+    using namespace std;
+    int main()
+    {
+        int x,y,z;
+        cout<<"Enter the numbers you want to swap"<<endl;
+        cin>>x>>y;
+        cout<<"So numbers are - Firstno.= "<<x<<"and second number is Secondno.="<<y<<endl;
+
+        z=x;
+        x=y;
+        y=z;
+
+        cout<<" Numbers after swapping  are Firstno.= "<<x<<" Secondno.= "<<y<<endl;
+
+
+    
+    return 0;
+    }
