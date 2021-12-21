@@ -1,1 +1,13 @@
+#include <iostream>
+    using namespace std;
+    int main()
+    {
+      char Mychar;
+      
+      do{
+          cout<<"My name is Parth Sharma"<<"  "<<"Enter value of x again if u want to print the same"<<endl;
+          cin>>Mychar;
 
+      }while(Mychar=='x');
+    return 0;
+    }
