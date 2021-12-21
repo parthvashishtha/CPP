@@ -1,1 +1,16 @@
+#include <iostream>
+    using namespace std;
+    int main()
+    {
+        cout<<"Enter any character"<<endl;
+        char myChar;
+        cin>>myChar;
+        while (myChar=='x')
+        {
+            cout<<"My name is Parth"<<"Enter other character"<<endl;
+            cin>>myChar;
+        }
+        
 
+    return 0;
+    }
