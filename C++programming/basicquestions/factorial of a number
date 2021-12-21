@@ -1,0 +1,19 @@
+    #include <iostream>
+    using namespace std;
+    int main()
+    {
+        cout<<"Enter the number for finding factorial"<<endl;
+        int x,fac;
+        cin>>x;
+        fac=x;
+        while (x>1)
+        {
+            x--;
+            fac=fac*x;
+        }
+
+        cout<<"Factorial  value is "<<fac<<endl;
+       
+
+    return 0;
+    }
