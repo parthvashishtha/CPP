@@ -1,1 +1,30 @@
+    #include <iostream>
+    using namespace std;
+    int main()
+    {
+        cout<<"Palindrome Check Program"<<endl;
+        int n,rev=0,digit,num;
+        
+        cout<<"Enter the number you want to check"<<endl;
+        cin>>num;
+        n=num;
 
+        while (num!=0)
+        {
+            digit=num%10;
+            rev=digit+(rev*10);
+            num=num/10;
+        }
+
+        if(n==rev)
+        {
+            cout<<"Number is palindrome"<<endl;
+        }
+        else
+        {
+            cout<<"Number is not palindrome"<<endl;
+        }
+        
+
+    return 0;
+    }
