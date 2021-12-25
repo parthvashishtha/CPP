@@ -1,1 +1,209 @@
+#include <iostream>
+using namespace std;
 
+        class stack
+        {
+         private:
+         
+             int top;
+             int arr[5];
+         
+
+         public:
+         stack()
+        {
+            top=-1;
+            for (int  i = 0; i < 5; i++)
+            {
+                arr[i]=0;
+            }
+            
+        }
+
+        bool isFull()
+        {
+            if(top==4)
+            return true;
+            else
+            return false;
+            
+
+        }
+        bool isEmpty()
+        {
+            if(top==-1)
+            return true;
+            else
+            return false;
+
+
+        }
+
+        void push(int value)
+        {
+                if(isFull())
+                {
+                    cout<<"Stack is in overflow condition"<<endl;
+                }
+                else
+                {
+                    top++;
+                    arr[top]=value;
+            
+                }
+        }
+
+        int pop()
+        {
+        if(isEmpty())
+        {
+            cout<<"Stack is in underflow condition "<<endl;
+            return 0;
+        }
+        else
+        {
+            int popValue=arr[top];
+            arr[top]=0;
+            top --;
+            return popValue;
+        }
+        }
+
+        void change(int position, int value)
+        {
+            cout<<"Value of item is changed at the given position successfully"<<endl;
+           arr[position]=value;
+
+        }
+
+        int peek(int position)
+    {
+        if(isEmpty())
+        {
+            cout<<"Stack is in underflow condition"<<endl;
+            return 0;
+
+        }
+        else
+        {
+            return arr[position];
+        }
+    }
+
+        int count()
+        {
+            return (top+1);
+        }
+
+        int display()
+        {
+          cout<<"All values of the stack are..."<<endl;
+          for (int  i = 4; i >= 0; i--)
+          {
+            cout<<arr[i]<<endl;
+          }
+          
+        }
+
+
+            
+        };
+
+
+
+            int main()
+            {
+                stack s1;
+                int position,option, value;
+
+                do
+                {
+                   cout<<"Tell me what do you want!!"<<endl;
+                   cout<<"1.Push()"<<endl;
+                   cout<<"2.Pull()"<<endl;
+                   cout<<"3.isFull()"<<endl;
+                   cout<<"4.isEmpty()"<<endl;
+                   cout<<"5.Peek()"<<endl;
+                   cout<<"6.Change()"<<endl;
+                   cout<<"7.Count()"<<endl;
+                   cout<<"8.Display()"<<endl;
+                   cout<<"9.Clear the screen()"<<endl;
+
+                   cin>>option;
+
+                   switch (option)
+                   {
+                    case 1:
+                         cout<<"Enter the value you want to push.."<<endl;
+                         cin>>value;
+                         s1.push(value);
+                         break;
+
+                    case 2:
+                         cout<<"Pop function called ...and the popped value is-"<<s1.pop()<<endl;
+                         break;
+
+                    case 3: 
+                         if(s1.isFull())
+                         {
+                             cout<<"Stack is full"<<endl;
+                         }  
+                         else
+                         {
+                             cout<<"Stack is not full"<<endl;
+
+                         } 
+                         break;
+                    case 4: 
+                         if(s1.isEmpty())
+                         {
+                             cout<<"Stack is empty"<<endl;
+                         }  
+                         else
+                         {
+                             cout<<"Stack is not empty"<<endl;
+
+                         } 
+                         break;
+
+                    case 5:
+                         cout<<"Enter position of item you want to peek"<<endl;
+                         cin>>position;
+                         cout<<"Peek function is called at the position -"<<position<<endl<<"And the peeked item is-"<<s1.peek(position)<<endl;
+                         break;
+
+
+
+                     case 6:
+                         cout<<"Enter the value of position you want to change"<<endl;
+                         cin>>position;
+                         cout<<"Enter the value of item you want to change"<<endl;
+                         cin>>value;
+                         s1.change(position,value);
+                         break;
+
+                      case 7:
+                         cout<<"Total number of items in the stack are-"<<s1.count()<<endl;
+                         break;
+
+                       
+                       case 8:
+                        cout<<"Display function called.."<<endl;
+                        s1.display();
+                        break;
+
+                       case 9:
+                         system("cls");
+                         break;
+
+                              
+                   
+                   default:
+                       cout<<"Enter proper option vro!!!"<<endl;
+                       break;
+                   }
+                } while (option!=0);
+                
+
+            return 0;
+            }
