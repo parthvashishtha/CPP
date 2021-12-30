@@ -1,1 +1,26 @@
+    #include <iostream>
+    using namespace std;
 
+    int maximum(int x, int y)
+    {
+        if (x>y)
+        {
+            return x;
+        }
+        else
+        return y;
+        
+    }
+
+    int main()
+    {
+        int a,b;
+        cout<<"Enter the number of values you want to get compare"<<endl;
+        cin>>a>>b;
+        int c=maximum(a,b);
+        cout<<"Maximum of two numbers is: "<<c<<endl;
+        
+
+
+    return 0;
+    }
