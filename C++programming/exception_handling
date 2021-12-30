@@ -1,1 +1,25 @@
-
+    #include <iostream>
+    using namespace std;
+    int main()
+    {
+        int num,denom,result;
+        cout<<"Enter numerator and denominator for division "<<endl;
+        cin>>num>>denom;
+        try
+        {
+            if (denom==0)
+            {
+                throw denom;
+            }
+            
+             result=num/denom;
+            
+        }
+        catch(int ex)
+        {
+            cout<<"Exception: Divide by zero not allowed:"<<ex;
+        }
+        cout<<"Division is:"<<result<<endl;
+        
+    return 0;
+    }
