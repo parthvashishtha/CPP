@@ -1,1 +1,28 @@
+    #include <iostream>
+    using namespace std;
 
+    struct Person{
+        char name[50];
+        int age;
+        int salary;
+    };
+
+    int main()
+    {
+        Person p1;
+        cout<<"Program for person details:"<<endl<<"Enter the name : "<<endl;
+        cin.getline(p1.name,50);
+        cout<<"Enter his/her age:"<<endl;
+        cin>>p1.age;
+        cout<<"Enter his/her salary:"<<endl;
+        cin>>p1.salary;
+
+        cout<<endl<<"Person details are as follows:"<<endl;
+        cout<<"Person name:"<<p1.name<<endl;
+        cout<<"Person age:"<<p1.age<<endl;
+        cout<<"Person salary:"<<p1.salary<<endl;
+        
+
+
+    return 0;
+    }
