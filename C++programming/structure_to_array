@@ -1,1 +1,36 @@
+    #include <iostream>
+    #include<string>
+    using namespace std;
 
+    struct Person{
+        string name;
+        int age;
+        int salary;
+    };
+
+    int main()
+    {
+        Person p[2];
+        cout<<"Enter details of two persons i.e(name,age,salary) :"<<endl;
+        for (int  i = 0; i < 2; i++)
+        {
+           cout<<"For person:"<<(i+1)<<endl;
+           cin>>p[i].name;
+           cin>>p[i].age;
+           cin>>p[i].salary;
+        }
+
+        for (int  i = 0; i < 2; i++)
+        {
+            cout<<"Details of person "<<(i+1)<<" are :"<<endl;
+            cout<<"Name: "<<p[i].name<<endl;
+            cout<<"Age: "<<p[i].age<<endl;
+            cout<<"Salary: "<<p[i].salary<<endl;
+        }
+        
+        
+        
+
+
+    return 0;
+    }
