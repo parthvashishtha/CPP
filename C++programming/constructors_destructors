@@ -1,1 +1,81 @@
+    #include <iostream>
+    #include<string>
+    using namespace std;
 
+        class Cars{ 
+
+              private:
+
+              string company_name;
+              string model_name;
+              string fuel_type;
+              float  mileage;
+              long double  price;
+
+              public:
+
+              Cars(){
+                    cout<<"Default condtructor called"<<endl;
+                    company_name="Renault";
+              }
+
+              Cars(string mname,string ftype, float m, long double p ){
+                  cout<<"Parameterised constructor called "<<endl;
+                  model_name=mname;
+                  fuel_type=ftype;
+                  mileage=m;
+                  price=p;
+
+
+              }
+
+              Cars(Cars &obj)
+              {
+                  cout<<"Copy Constructor called"<<endl;
+                  company_name=obj.company_name;
+                  model_name=obj.model_name;
+                  fuel_type=obj.fuel_type;
+                  mileage=obj.mileage;
+                  price=obj.price;
+
+
+              }
+
+              void setdata(string cname,string mname,string ftype, float m, long double p)
+              {
+ 
+              
+              model_name=mname;
+              fuel_type=ftype;
+              mileage=m;
+              price=p;
+
+
+              }
+
+              void displaydata()
+              {
+                  cout<<"Company details:"<<endl<<endl;
+                  cout<<"Company name:"<<company_name<<endl;
+                  cout<<"Car model:"<<model_name<<endl;
+                  cout<<"Car fueltype:"<<fuel_type<<endl;
+                  cout<<"Car  mileage:"<<mileage<<endl;
+                  cout<<"Car price"<<price<<endl;
+              }
+
+
+            
+
+              };
+        int main()
+        {
+            Cars c1,c2("Duster","Petrol",12,100000);
+             c1.setdata("Renault","Pulse","Petrol",13.6,130000);
+             c1.displaydata();
+             c2.displaydata();
+             Cars car3=c1;
+             car3.displaydata();
+            
+
+        return 0;
+        }
