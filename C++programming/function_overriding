@@ -1,1 +1,45 @@
+    #include <iostream>
+    using namespace std;
 
+    class Animals{
+          public:
+            void makeSound()
+            {
+                cout<<"Animal Sound"<<endl;
+            }   
+    };
+
+    class Dogs : public Animals{
+           public:
+             void makeSound()
+            {
+                cout<<"Dog bark"<<endl;
+            }  
+             
+    };
+
+    class Cats : public Animals{
+           public:
+             void makeSound()
+            {
+                cout<<"Cats meow"<<endl;
+            }  
+             
+    };
+
+
+
+    int main()
+    {
+        Animals a1;
+        a1.makeSound();
+        cout<<endl;
+        Dogs d1;
+        d1.makeSound();
+        cout<<endl;
+        Cats c1;
+        c1.makeSound();
+
+
+    return 0;
+    }
