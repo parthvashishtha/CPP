@@ -1,1 +1,39 @@
+    #include <iostream>
+    using namespace std;
 
+    class  MyBaseclass{
+
+        public:
+            int x;
+            MyBaseclass()
+            {
+                 x=5;
+                 y=5;
+                 z=5;
+
+            }
+
+        private:
+            int y;
+
+        protected:
+            int z;        
+
+    };
+
+    void MyOutsidefunction(MyBaseclass obj)
+    {
+        cout<<"X :"<<obj.x<<endl;
+        // cout<<"Y :"<<obj.y<<endl;
+        // cout<<"Z :"<<obj.z<<endl;
+        
+    }
+
+    int main()
+    {
+        MyBaseclass obj1;
+        MyOutsidefunction(obj1);
+
+
+    return 0;
+    }
