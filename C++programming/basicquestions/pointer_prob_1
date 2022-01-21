@@ -1,0 +1,28 @@
+    #include <iostream>
+    using namespace std;
+
+    void pointFunc(int*a, int*b){
+        int temp=*a;
+        *a=*a+ *b;
+        *b=temp-*b;
+
+        if (*b<0)
+        {
+            *b=-(*b);
+        }
+        
+
+    };
+    int main()
+    {
+        int q,r;
+        int *pq=&q,*pr=&r;
+
+        
+        cout<<"Enter the values of q and r :"<<endl;
+        cin>>q>>r;
+        pointFunc(pq,pr);
+        cout<<q<<endl<<r<<endl;
+
+    return 0;
+    }
