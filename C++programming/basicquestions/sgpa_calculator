@@ -1,0 +1,33 @@
+    #include <iostream>
+    using namespace std;
+    int main()
+    {
+        cout<<"Enter your so called grade values for the given below subjects :)"<<endl;
+        cout<<"All subjects are in series so don't worry just enter them :)"<<endl;
+        int DSAL,DBMS,JAVAL,DSA,COA,DBMS,JAVA,MATHS,APT;
+        float sgpa;
+        cout<<"Dsa Lab"<<endl;
+        cin>>DSAL;
+        cout<<"DBMS Lab"<<endl;
+        cin>>DBMSL;
+        cout<<"Java Lab"<<endl;
+        cin>>JAVAL;
+        cout<<"DSA"<<endl;
+        cin>>DSA;
+        cout<<"COA"<<endl;
+        cin>>COA;
+        cout<<"DBMS"<<endl;
+        cin>>DBMS;
+        cout<<"JAva"<<endl;
+        cin>>JAVA;
+        cout<<"Maths"<<endl;
+        cin>>MATHS;
+        cout<<"Aptitude"<<endl;
+        cin>>APT;
+
+        sgpa= float((DSAL*2) + (DBMSL*1)+(JAVAL*1)+(DSA*3)+ (COA*3)+(DBMS*3)+(JAVA*2)+(MATHS*4)+(APT*2))/21;
+        cout<<"SGPA:"<<sgpa;
+        return 0;
+
+    return 0;
+    }
